@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meltberry & Co. - Product Catalog</title>
+    <style>
+        :root {
+            --primary-color: #581124;
+            --secondary-color: #8c243e;
+            --bg-color: #FAF6F0;
+            --card-bg: #FFFFFF;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-color: #E8DFD8;
+            --accent-gold: #D4AF37;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Playfair Display', Georgia, serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px 25px 20px;
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .logo {
+            max-width: 320px;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .subtitle {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+            background-color: #f9f9f9;
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .price-tag {
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-top: 5px;
+        }
+
+        /* Contact & Inquiry Banner */
+        .contact-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 40px 20px;
+            margin: 50px 0 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .contact-section h2 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-section p {
+            font-family: system-ui, -apple-system, sans-serif;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--bg-color);
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: 1px solid var(--border-color);
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .contact-item:hover {
+            background-color: var(--primary-color);
+            color: #FFFFFF;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
+            margin-top: 30px;
+            background-color: var(--card-bg);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <!-- Ensure logo file is saved as 'logo.png' or matches this exact filename in the same folder -->
+            <img src="WhatsApp Image 2026-10-01 at 3.08.35 PM_3.png" alt="Meltberry & Co. Logo" class="logo">
+        </div>
+        <p class="subtitle">Handcrafted Artisanal Candles & Wax Sachets</p>
+    </header>
+
+    <div class="container">
+        <div class="catalog-grid">
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Daisy Candle.jpg" alt="Daisy Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Daisy Candle</h2>
+                    <p class="price-tag">₹299</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Hibiscus Urli Candle.jpg" alt="Hibiscus Urli Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Hibiscus Urli Candle</h2>
+                    <p class="price-tag">₹499</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Jasmine Wax Sachet.jpg" alt="Jasmine Wax Sachet">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Jasmine Wax Sachet</h2>
+                    <p class="price-tag">₹249</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Laddu Candle Box.jpg" alt="Laddu Candle Box">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Laddu Candle Box</h2>
+                    <p class="price-tag">₹599</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Lavender Glass Candle.jpg" alt="Lavender Glass Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Lavender Glass Candle</h2>
+                    <p class="price-tag">₹399</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Lavender Wax Sachet.jpg" alt="Lavender Wax Sachet">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Lavender Wax Sachet</h2>
+                    <p class="price-tag">₹249</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Lemongrass Wax SAchet (2).jpg" alt="Lemongrass Wax Sachet Design 2">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Lemongrass Wax Sachet (Design 2)</h2>
+                    <p class="price-tag">₹249</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Lemongrass Wax Sachet.jpg" alt="Lemongrass Wax Sachet">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Lemongrass Wax Sachet</h2>
+                    <p class="price-tag">₹249</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Lotus Candle.jpg" alt="Lotus Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Lotus Candle</h2>
+                    <p class="price-tag">₹349</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Lotus Pond Urli Candle.jpg" alt="Lotus Pond Urli Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Lotus Pond Urli Candle</h2>
+                    <p class="price-tag">₹549</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Mogra Wax Sachet.jpg" alt="Mogra Wax Sachet">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Mogra Wax Sachet</h2>
+                    <p class="price-tag">₹249</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Ocean Glass Candle Small.jpg" alt="Ocean Glass Candle Small">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Ocean Glass Candle (Small)</h2>
+                    <p class="price-tag">₹299</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Ocean Glass Candle.jpg" alt="Ocean Glass Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Ocean Glass Candle</h2>
+                    <p class="price-tag">₹449</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Ocean Ring Wax Sachet.jpg" alt="Ocean Ring Wax Sachet">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Ocean Ring Wax Sachet</h2>
+                    <p class="price-tag">₹249</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Ocean Wax Sachet.jpg" alt="Ocean Wax Sachet">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Ocean Wax Sachet</h2>
+                    <p class="price-tag">₹249</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Parijat Glass Candle.jpg" alt="Parijat Glass Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Parijat Glass Candle</h2>
+                    <p class="price-tag">₹399</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Rose Candle.jpg" alt="Rose Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Rose Candle</h2>
+                    <p class="price-tag">₹299</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Rose Glass Candle Small.jpg" alt="Rose Glass Candle Small">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Rose Glass Candle (Small)</h2>
+                    <p class="price-tag">₹299</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Rose Glass Candle.jpg" alt="Rose Glass Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Rose Glass Candle</h2>
+                    <p class="price-tag">₹399</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Rose Urli Candle.jpg" alt="Rose Urli Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Rose Urli Candle</h2>
+                    <p class="price-tag">₹499</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Rose Wax Sachet.jpg" alt="Rose Wax Sachet">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Rose Wax Sachet</h2>
+                    <p class="price-tag">₹249</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Sunflower Urli Candle.jpg" alt="Sunflower Urli Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Sunflower Urli Candle</h2>
+                    <p class="price-tag">₹499</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Teddy Bear Candle.jpg" alt="Teddy Bear Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Teddy Bear Candle</h2>
+                    <p class="price-tag">₹349</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Tulip Bouquet Candle.jpg" alt="Tulip Bouquet Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Tulip Bouquet Candle</h2>
+                    <p class="price-tag">₹399</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Contact & Ordering Section -->
+        <div class="contact-section">
+            <h2>Order & Customization Inquiries</h2>
+            <p>For custom gift hampers, bulk orders, or corporate inquiries, reach out to us directly:</p>
+            <div class="contact-details">
+                <a href="https://wa.me/" class="contact-item" target="_blank">📱 WhatsApp Us</a>
+                <a href="mailto:info@meltberry.com" class="contact-item">✉️ Email Inquiry</a>
+                <a href="https://instagram.com" class="contact-item" target="_blank">📸 Follow on Instagram</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; Meltberry & Co. All Rights Reserved. Handcrafted with Love.
+    </footer>
+
+</body>
+</html>
