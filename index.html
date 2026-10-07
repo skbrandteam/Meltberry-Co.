@@ -13,6 +13,8 @@
             --text-color: #333333;
             --text-light: #666666;
             --border-color: #E8DFD8;
+            --whatsapp-green: #25D366;
+            --whatsapp-dark: #128C7E;
         }
 
         * {
@@ -99,6 +101,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center 25%;
+        }
+
+        .image-container img.fit-top {
+            object-position: top center !important;
         }
 
         .product-info {
@@ -124,6 +131,29 @@
             font-weight: 700;
             color: var(--secondary-color);
             margin-top: 5px;
+            margin-bottom: 15px;
+        }
+
+        .buy-now-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: var(--whatsapp-green);
+            color: #FFFFFF;
+            text-decoration: none;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 10px 16px;
+            border-radius: 25px;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            box-shadow: 0 2px 6px rgba(37, 211, 102, 0.3);
+        }
+
+        .buy-now-btn:hover {
+            background-color: var(--whatsapp-dark);
+            transform: scale(1.02);
         }
 
         .contact-section {
@@ -203,126 +233,7 @@
     <div class="container">
         <div class="catalog-grid">
 
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Daisy Candle.jpg" alt="Daisy Candle">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Daisy Candle</h2>
-                    <p class="price-tag">₹75 / piece</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Hibiscus Urli Candle.jpg" alt="Hibiscus Urli Candle">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Hibiscus Urli Candle (2.5 Inch)</h2>
-                    <p class="price-tag">₹200</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Jasmine Wax Sachet.jpg" alt="Jasmine Wax Sachet">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Jasmine Wax Sachet</h2>
-                    <p class="price-tag">₹200</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Laddu Candle Box.jpg" alt="Laddu Candle Box">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Laddu Candle (Box of 4)</h2>
-                    <p class="price-tag">₹350</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Lavender Glass Candle.jpg" alt="Lavender Glass Candle">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Lavender Glass Candle</h2>
-                    <p class="price-tag">₹250</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Lavender Wax Sachet.jpg" alt="Lavender Wax Sachet">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Lavender Wax Sachet</h2>
-                    <p class="price-tag">₹200</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Lemongrass Wax SAchet (2).jpg" alt="Lemongrass Wax Sachet Design 2">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Lemongrass Wax Sachet (Design 2)</h2>
-                    <p class="price-tag">₹200</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Lemongrass Wax Sachet.jpg" alt="Lemongrass Wax Sachet">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Lemongrass Wax Sachet</h2>
-                    <p class="price-tag">₹200</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Lotus Candle.jpg" alt="Lotus Candle">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Lotus Candle</h2>
-                    <p class="price-tag">₹250 / piece</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Lotus Pond Urli Candle.jpg" alt="Lotus Pond Urli Candle">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Lotus Pond Urli Candle (3.5 Inch)</h2>
-                    <p class="price-tag">₹350</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Mogra Wax Sachet.jpg" alt="Mogra Wax Sachet">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Mogra Wax Sachet</h2>
-                    <p class="price-tag">₹250</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Ocean Glass Candle Small.jpg" alt="Ocean Glass Candle Small">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Ocean Glass Candle (Small)</h2>
-                    <p class="price-tag">₹250</p>
-                </div>
-            </div>
-
+            <!-- ₹600 Products -->
             <div class="product-card">
                 <div class="image-container">
                     <img src="Ocean Glass Candle.jpg" alt="Ocean Glass Candle">
@@ -330,56 +241,7 @@
                 <div class="product-info">
                     <h2 class="product-title">Ocean Glass Candle (Large)</h2>
                     <p class="price-tag">₹600</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Ocean Ring Wax Sachet.jpg" alt="Ocean Ring Wax Sachet">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Ocean Ring Wax Sachet</h2>
-                    <p class="price-tag">₹200</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Ocean Wax Sachet.jpg" alt="Ocean Wax Sachet">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Ocean Wax Sachet</h2>
-                    <p class="price-tag">₹250</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Parijat Glass Candle.jpg" alt="Parijat Glass Candle">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Parijat Glass Candle</h2>
-                    <p class="price-tag">₹250</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Rose Candle.jpg" alt="Rose Candle">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Rose Candle</h2>
-                    <p class="price-tag">₹200 / piece</p>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="Rose Glass Candle Small.jpg" alt="Rose Glass Candle Small">
-                </div>
-                <div class="product-info">
-                    <h2 class="product-title">Rose Glass Candle (Small)</h2>
-                    <p class="price-tag">₹250</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Ocean%20Glass%20Candle%20(Large)." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
                 </div>
             </div>
 
@@ -390,16 +252,177 @@
                 <div class="product-info">
                     <h2 class="product-title">Rose Glass Candle (Large)</h2>
                     <p class="price-tag">₹600</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Rose%20Glass%20Candle%20(Large)." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <!-- ₹450 Products -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Tulip Bouquet Candle.jpg" alt="Tulip Bouquet Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Tulip Bouquet Candle</h2>
+                    <p class="price-tag">₹450</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Tulip%20Bouquet%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <!-- ₹350 Products -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Laddu Candle Box.jpg" alt="Laddu Candle Box">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Laddu Candle (Box of 4)</h2>
+                    <p class="price-tag">₹350</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Laddu%20Candle%20Box." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="image-container">
-                    <img src="Rose Urli Candle.jpg" alt="Rose Urli Candle">
+                    <img src="Lotus Pond Urli Candle.jpg" alt="Lotus Pond Urli Candle">
                 </div>
                 <div class="product-info">
-                    <h2 class="product-title">Rose Urli Candle (2.5 Inch)</h2>
-                    <p class="price-tag">₹200</p>
+                    <h2 class="product-title">Lotus Pond Urli Candle (3.5 Inch)</h2>
+                    <p class="price-tag">₹350</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Lotus%20Pond%20Urli%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Teddy Bear Candle.jpg" alt="Teddy Bear Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Teddy Bear Candle</h2>
+                    <p class="price-tag">₹350</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Teddy%20Bear%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <!-- Line 177: Automatic fallback mechanism for Tin Candle image -->
+                    <img src="Tin Candles 350 Rs_2.jpg" alt="Tin Candle" onerror="if (this.src.indexOf('Tin Candles 350 Rs_2.jpg') != -1) { this.src='Tin Candles 350 Rs.jpg'; } else if (this.src.indexOf('Tin Candles 350 Rs.jpg') != -1) { this.src='Tin Candles 350 Rs.jpeg'; }">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Tin Candle</h2>
+                    <p class="price-tag">₹350</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Tin%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <!-- ₹300 Products -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Sunflower Urli Candle.jpg" alt="Sunflower Urli Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Sunflower Urli Candle (3.5 Inch)</h2>
+                    <p class="price-tag">₹300</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Sunflower%20Urli%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <!-- ₹250 Products -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Glass Water Candle.jpeg" alt="Glass Water Candle" class="fit-top">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Glass Water Candle</h2>
+                    <p class="price-tag">₹250</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Glass%20Water%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Lavender Glass Candle.jpg" alt="Lavender Glass Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Lavender Glass Candle</h2>
+                    <p class="price-tag">₹250</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Lavender%20Glass%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Lotus Candle.jpg" alt="Lotus Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Lotus Candle</h2>
+                    <p class="price-tag">₹250</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Lotus%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Mogra Wax Sachet.jpg" alt="Mogra Wax Sachet">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Mogra Wax Sachet</h2>
+                    <p class="price-tag">₹250</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Mogra%20Wax%20Sachet." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Ocean Glass Candle Small.jpg" alt="Ocean Glass Candle Small">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Ocean Glass Candle (Small)</h2>
+                    <p class="price-tag">₹250</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Ocean%20Glass%20Candle%20(Small)." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Ocean Wax Sachet.jpg" alt="Ocean Wax Sachet">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Ocean Wax Sachet</h2>
+                    <p class="price-tag">₹250</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Ocean%20Wax%20Sachet." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Parijat Glass Candle.jpg" alt="Parijat Glass Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Parijat Glass Candle</h2>
+                    <p class="price-tag">₹250</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Parijat%20Glass%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Rose Glass Candle Small.jpg" alt="Rose Glass Candle Small">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Rose Glass Candle (Small)</h2>
+                    <p class="price-tag">₹250</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Rose%20Glass%20Candle%20(Small)." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Rose Jar Candle 250 Rs.jpeg" alt="Rose Jar Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Rose Jar Candle</h2>
+                    <p class="price-tag">₹250</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Rose%20Jar%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
                 </div>
             </div>
 
@@ -410,36 +433,176 @@
                 <div class="product-info">
                     <h2 class="product-title">Rose Wax Sachet</h2>
                     <p class="price-tag">₹250</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Rose%20Wax%20Sachet." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <!-- ₹200 Products -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Hibiscus Urli Candle.jpg" alt="Hibiscus Urli Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Hibiscus Urli Candle (2.5 Inch)</h2>
+                    <p class="price-tag">₹200</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Hibiscus%20Urli%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="image-container">
-                    <img src="Sunflower Urli Candle.jpg" alt="Sunflower Urli Candle">
+                    <img src="Jasmine Wax Sachet.jpg" alt="Jasmine Wax Sachet">
                 </div>
                 <div class="product-info">
-                    <h2 class="product-title">Sunflower Urli Candle (3.5 Inch)</h2>
-                    <p class="price-tag">₹300</p>
+                    <h2 class="product-title">Jasmine Wax Sachet</h2>
+                    <p class="price-tag">₹200</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Jasmine%20Wax%20Sachet." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="image-container">
-                    <img src="Teddy Bear Candle.jpg" alt="Teddy Bear Candle">
+                    <img src="Lavender Wax Sachet.jpg" alt="Lavender Wax Sachet">
                 </div>
                 <div class="product-info">
-                    <h2 class="product-title">Teddy Bear Candle</h2>
-                    <p class="price-tag">₹350 / piece</p>
+                    <h2 class="product-title">Lavender Wax Sachet</h2>
+                    <p class="price-tag">₹200</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Lavender%20Wax%20Sachet." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
                 </div>
             </div>
 
             <div class="product-card">
                 <div class="image-container">
-                    <img src="Tulip Bouquet Candle.jpg" alt="Tulip Bouquet Candle">
+                    <img src="Lemongrass Wax SAchet (2).jpg" alt="Lemongrass Wax Sachet Design 2">
                 </div>
                 <div class="product-info">
-                    <h2 class="product-title">Tulip Bouquet Candle</h2>
-                    <p class="price-tag">₹450 / piece</p>
+                    <h2 class="product-title">Lemongrass Wax Sachet (Design 2)</h2>
+                    <p class="price-tag">₹200</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Lemongrass%20Wax%20Sachet%20(Design%202)." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Lemongrass Wax Sachet.jpg" alt="Lemongrass Wax Sachet">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Lemongrass Wax Sachet</h2>
+                    <p class="price-tag">₹200</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Lemongrass%20Wax%20Sachet." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Ocean Ring Wax Sachet.jpg" alt="Ocean Ring Wax Sachet">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Ocean Ring Wax Sachet</h2>
+                    <p class="price-tag">₹200</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Ocean%20Ring%20Wax%20Sachet." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Rose Candle.jpg" alt="Rose Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Rose Candle</h2>
+                    <p class="price-tag">₹200</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Rose%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Rose Urli Candle.jpg" alt="Rose Urli Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Rose Urli Candle (2.5 Inch)</h2>
+                    <p class="price-tag">₹200</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Rose%20Urli%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Wedding Gown 200 Rs. per piece.jpeg" alt="Wedding Gown Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Wedding Gown Candle</h2>
+                    <p class="price-tag">₹200</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Wedding%20Gown%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <!-- ₹175 Products -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Big Tree.jpeg" alt="Big Tree Candle" class="fit-top">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Big Tree Candle</h2>
+                    <p class="price-tag">₹175</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Big%20Tree%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <!-- ₹100 Products -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Chai Candle.jpeg" alt="Chai Candle" class="fit-top">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Chai Candle</h2>
+                    <p class="price-tag">₹100</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Chai%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Heart 100 Rs..jpeg" alt="Heart Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Heart Candle</h2>
+                    <p class="price-tag">₹100</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Heart%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Peony Candles 100 Rs. per piece.jpeg" alt="Peony Candles">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Peony Candle</h2>
+                    <p class="price-tag">₹100</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Peony%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Sunflower Floating Candle 100 Rs. Per Pice.jpeg" alt="Sunflower Floating Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Sunflower Floating Candle</h2>
+                    <p class="price-tag">₹100</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Sunflower%20Floating%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
+                </div>
+            </div>
+
+            <!-- ₹75 Products -->
+            <div class="product-card">
+                <div class="image-container">
+                    <img src="Daisy Candle.jpg" alt="Daisy Candle">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-title">Daisy Candle</h2>
+                    <p class="price-tag">₹75</p>
+                    <a href="https://wa.me/918779799393?text=Hi%20Meltberry%20%26%20Co.%2C%20I%20want%20to%20buy%20the%20Daisy%20Candle." class="buy-now-btn" target="_blank" rel="noopener noreferrer">💬 Buy Now</a>
                 </div>
             </div>
 
